@@ -18,9 +18,8 @@ def createList():
         counter += 1
         item = input("Item " + str(counter) + ":")
         if item == "":
-            break
+            break  
         file.write(item + EOL)
-    return True
 
 def readList():
     print("Read existing list")
@@ -37,12 +36,19 @@ def readList():
         if (item == ""):
             break
         print("Item " + str(counter) + ": " + item, end="")
-    return True
+    
 
 done = False
 while not done:
     action = promtUserForAction()
     if (action == "1"):
         done = createList()
+        pass
+    
     elif (action == "2"):
         done = readList()
+        pass
+    
+    else:
+        promtUserForAction()
+    
